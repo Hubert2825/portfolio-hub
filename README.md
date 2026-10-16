@@ -60,7 +60,7 @@ Save images in `assets/images/projects/` and list them under `screenshots:` in `
 
 ## Deploy to GitHub Pages
 
-1. On GitHub, create a **public** repository named exactly `hubert2825.github.io`.
+1. On GitHub, create a **public** repository named exactly `portfolio-hub`.
 2. Push these files to the `main` branch:
 
    ```bash
@@ -68,12 +68,12 @@ Save images in `assets/images/projects/` and list them under `screenshots:` in `
    git add .
    git commit -m "Initial portfolio"
    git branch -M main
-   git remote add origin https://github.com/Hubert2825/hubert2825.github.io.git
+   git remote add origin https://github.com/Hubert2825/portfolio-hub.git
    git push -u origin main
    ```
 
 3. In the repository, open **Settings > Pages**. Under **Build and deployment**, set **Source** to **Deploy from a branch**, choose **main** and **/ (root)**, then save.
-4. Wait a minute or two, then visit https://hubert2825.github.io/.
+4. Wait a minute or two, then visit https://portfolio-hub/.
 
 If the site doesn't update after a push, open the repository's **Actions** tab and check the "pages build and deployment" run for errors.
 
