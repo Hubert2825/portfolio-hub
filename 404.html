@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found | Hubert</title>
-  <meta name="robots" content="noindex">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        document.documentElement.setAttribute("data-theme", theme);
-      } catch (e) {}
-    })();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <main class="wrap not-found">
-    <h1>Page not found</h1>
-    <p>That address doesn't lead anywhere on this site. The link may be old or mistyped.</p>
-    <div><a class="btn btn--primary" href="/">Go to the home page</a></div>
-  </main>
-</body>
-</html>
+---
+layout: default
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+<section class="wrap not-found">
+  <h1>Page not found</h1>
+  <p>That address doesn't lead anywhere on this site. The link may be old or mistyped.</p>
+  <div><a class="btn btn--primary" href="{{ '/' | relative_url }}">Go to the home page</a></div>
+</section>

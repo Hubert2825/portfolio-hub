@@ -1,0 +1,46 @@
+# Software projects shown on the Software page and summarized on the home page.
+# To add screenshots: save images in assets/images/projects/ and list them under "screenshots"
+# with file, alt, and caption (same format as the hands-on photos).
+
+- id: desq
+  title: DESQ
+  tagline: A school management system with a built-in learning platform, made for many schools on one deployment.
+  points:
+    - "Four portals (school admin, teacher, student, and parent). Each role sees only what it should, and teachers can only reach their own classes."
+    - "Gradebook with weighted assessment groups and drop-lowest rules, report cards with class ranking, and transcripts with GPA by term, year, and cumulative."
+    - "PDF export for report cards, transcripts, and fee receipts, plus a queued bulk export that bundles a whole class into one ZIP."
+    - "Courses with modules and lessons, assignments with a grading workflow, quizzes that grade themselves, discussion boards, and a calendar."
+    - "Daily attendance, timetables that block double-booking, and a teacher workload view."
+    - "Real-time notifications and one-to-one messaging over WebSockets, with rules about who is allowed to message whom."
+    - "A parent portal that shows published grades only, and parent accounts created through an invite link."
+    - "Fee structures, payments, receipts, and waivers, plus a public admissions form with status lookup and a waiting list."
+    - "Custom roles and permissions for each school, and school-level switches for turning features on and off."
+  decisions:
+    - "A course is a class subject, not a separate table, so enrollment always follows the class list."
+    - "Notifications run on events and listeners, so a controller fires one event and never talks to the notification code directly."
+    - "The server works out who the user is and which teacher they are. It never trusts an ID sent from the browser."
+    - "Balances and statuses are stored and updated inside transactions, which keeps fee totals consistent."
+  facts:
+    - label: Built with
+      value: Laravel, SQL Server, React, TanStack Router and Query, Tailwind CSS, Laravel Reverb
+    - label: Made for
+      value: Schools in Ghana, with local names, GHS currency, and a Kente-inspired color palette
+    - label: Status
+      value: In active development
+  screenshots: []
+
+- id: smartnest
+  title: SmartNest
+  tagline: A connected home prototype that senses its surroundings and opens a door for the right RFID card.
+  points:
+    - "Air quality (MQ135), temperature and humidity (DHT11), and ultrasonic sensors for a dustbin."
+    - "RFID door access (RC522) that recognizes five registered cardholders and swings a servo to open."
+    - "Several ESP32 and Arduino Uno boards that talk to each other over ESP-NOW and report to the Blynk cloud."
+    - "Firmware fixes for changes in the ESP32 Arduino core (version 3.3.8), and buzzer tones driven with ledcWriteTone()."
+  decisions: []
+  facts:
+    - label: Built with
+      value: ESP32, Arduino Uno, ESP-NOW, Blynk, RC522, MQ135, DHT11
+    - label: Status
+      value: Final project, presented as a live demo
+  screenshots: []

@@ -1,0 +1,52 @@
+# One block per area of work. To add photos:
+#   1. Resize each photo to about 1600 px wide and save it in assets/images/hands-on/
+#   2. Add an entry under "photos" with the file name, alt text (what the photo shows), and a caption.
+#
+#     photos:
+#       - file: cctv-roof-camera.jpg
+#         alt: A weatherproof camera mounted under a roof edge
+#         caption: Replacement camera with a sealed outdoor junction.
+#
+# Keep client names, addresses, and live camera views out of photos and captions unless the client agrees.
+
+- id: cctv
+  title: CCTV installation
+  summary: "Installing and replacing camera systems for indoor and outdoor coverage, from mounting and cabling to aiming each camera and checking the picture."
+  lessons:
+    - "Expect the unexpected in older setups. Old mounts and cabling rarely line up with new hardware, so flexibility matters."
+    - "Weather-proofing matters. Sealing every outdoor junction properly is what keeps a system working through harsh weather."
+    - "Check each camera's field of view before tightening anything down. It saves a second trip up the ladder."
+  photos: []
+
+- id: security
+  title: Security systems
+  summary: "Setting up electronic security systems, including access control, so the right people can get in and everyone else can't."
+  lessons: []
+  photos: []
+
+- id: fire-alarm
+  title: Fire alarm systems
+  summary: "Installing fire detection and alarm systems so a building can warn people early."
+  lessons: []
+  photos: []
+
+- id: public-address
+  title: Public address systems
+  summary: "Installing public address systems so announcements are clear across a building or site."
+  lessons: []
+  photos: []
+
+- id: network
+  title: Network infrastructure
+  summary: "Setting up the physical side of a network: the cabling and the equipment it connects. This pairs with network configuration and IP addressing on the software side."
+  lessons: []
+  photos: []
+
+- id: cad
+  title: CAD design
+  summary: "Modeling parts and structures in SolidWorks, where dimensions have to be exact before anything fits together."
+  lessons:
+    - "Progress isn't always smooth. Consistency wins in the end."
+    - "Struggling through a design teaches more than getting it right quickly."
+    - "Precision and persistence go hand in hand in engineering."
+  photos: []

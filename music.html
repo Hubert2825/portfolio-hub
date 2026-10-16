@@ -1,0 +1,77 @@
+---
+layout: default
+title: Music
+permalink: /music/
+description: "Hubert Baidoo is a music arranger, producer, and songwriter who writes orchestral scores. Listen to arrangements and songs."
+---
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Music</h1>
+    <p class="page-hero__lead">
+      Music is what I care about most. I arrange, produce, and write songs, and I write
+      orchestral scores.
+    </p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="approach-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="approach-title">How I write</h2>
+    </div>
+    <div class="section__body prose">
+      <p>
+        I used to think writing orchestral music was about getting the right notes. Now I think
+        it's about meaning. A score starts with a theme, but a theme is more than a melody. It's
+        an idea I'm trying to get across.
+      </p>
+      <p>
+        From there, every decision has to earn its place. I listen to each note and ask whether
+        it belongs, whether it carries weight, and whether it says something.
+      </p>
+      <ul class="plain-list">
+        <li><strong>Dynamics</strong> shape emotion. A crescendo builds tension, and a sudden drop makes space.</li>
+        <li><strong>Articulation and phrasing</strong> give a line its character. They decide whether it breathes, pushes, or holds back.</li>
+        <li><strong>Orchestration</strong> is where it comes alive. Every instrument is a voice, and the job is to make them speak as one.</li>
+      </ul>
+      <p>
+        The biggest lesson so far is that depth doesn't come from adding more. It comes from
+        being intentional with what's already there.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="work-title">Arrangements and songs</h2>
+    </div>
+    <div class="section__body">
+      {% if site.data.music and site.data.music.size > 0 %}
+      <ul class="tracks">
+        {% for piece in site.data.music %}
+        <li class="track">
+          <h3>{{ piece.title }}</h3>
+          {% if piece.kind %}<p class="track__kind">{{ piece.kind }}</p>{% endif %}
+          {% if piece.description %}<p class="track__desc">{{ piece.description }}</p>{% endif %}
+          {% if piece.media.type == "youtube" %}
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ piece.media.id }}" title="{{ piece.title | escape }}" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          {% elsif piece.media.type == "audio" %}
+          <audio controls preload="none" src="{{ '/assets/audio/' | append: piece.media.file | relative_url }}">
+            Your browser can't play this audio.
+          </audio>
+          {% elsif piece.media.type == "link" %}
+          <p><a class="btn btn--ghost" href="{{ piece.media.url }}" rel="noopener">Listen to {{ piece.title }}</a></p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="empty">Recordings and scores are being added. In the meantime, you can reach me about arrangements or songwriting on the <a href="{{ '/contact/' | relative_url }}">contact page</a>.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

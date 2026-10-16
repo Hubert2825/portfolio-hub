@@ -1,0 +1,28 @@
+# Add your pieces below, one block per piece. Delete the leading "# " to turn the example on.
+#
+# kind:        Arrangement, Original song, Score, Production, etc.
+# media.type:  youtube  (media.id is the video ID, e.g. dQw4w9WgXcQ)
+#              audio    (media.file is a file you put in assets/audio/)
+#              link     (media.url is a SoundCloud, Spotify, or other page)
+#
+# - title: Title of the piece
+#   kind: Arrangement
+#   description: One or two sentences on the piece and what you did on it.
+#   media:
+#     type: youtube
+#     id: VIDEO_ID
+#
+# - title: Another piece
+#   kind: Original song
+#   description: What it is about and how you wrote it.
+#   media:
+#     type: audio
+#     file: another-piece.mp3
+#
+# - title: A piece on another platform
+#   kind: Score
+#   description: Short description.
+#   media:
+#     type: link
+#     url: https://soundcloud.com/your-page/your-track
+[]

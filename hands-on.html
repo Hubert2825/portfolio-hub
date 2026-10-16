@@ -1,0 +1,48 @@
+---
+layout: default
+title: Hands-on work
+permalink: /hands-on/
+description: "Hands-on installation experience from Hubert Baidoo: CCTV, security systems, fire alarms, public address systems, network infrastructure, and CAD."
+---
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Hands-on work</h1>
+    <p class="page-hero__lead">
+      I install and set up systems that protect and connect buildings, and I model parts in CAD.
+      My CCTV work has been with ADEIGN BUSILINK SYSTEMS, where I work part-time.
+    </p>
+    <ul class="jump-list" aria-label="Jump to a section">
+      {% for area in site.data.hands_on %}
+      <li><a href="#{{ area.id }}">{{ area.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% for area in site.data.hands_on %}
+<section class="section" id="{{ area.id }}" aria-labelledby="{{ area.id }}-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="{{ area.id }}-title">{{ area.title }}</h2>
+    </div>
+    <div class="section__body">
+      <p class="area__summary">{{ area.summary }}</p>
+
+      {% if area.lessons and area.lessons.size > 0 %}
+      <h3 class="subhead">What I've learned</h3>
+      <ul class="project__points">
+        {% for lesson in area.lessons %}
+        <li>{{ lesson }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if area.photos and area.photos.size > 0 %}
+      {% include gallery.html photos=area.photos base="/assets/images/hands-on/" %}
+      {% else %}
+      <p class="empty">Photos from this work are being added.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}

@@ -1,0 +1,16 @@
+{% assign photos = include.photos %}
+{% if photos and photos.size > 0 %}
+<ul class="gallery">
+  {% for photo in photos %}
+  {% assign src = include.base | append: photo.file | relative_url %}
+  <li>
+    <figure>
+      <button type="button" class="gallery__open" data-lightbox data-full="{{ src }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}" aria-label="Enlarge photo: {{ photo.alt | escape }}">
+        <img src="{{ src }}" alt="{{ photo.alt | escape }}" loading="lazy" decoding="async">
+      </button>
+      {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+    </figure>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

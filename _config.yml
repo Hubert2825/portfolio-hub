@@ -1,0 +1,28 @@
+# Site settings. Edit the values marked EDIT, then commit.
+title: Hubert Baidoo
+tagline: Music arranger, software developer, and systems installer
+description: Computer engineering student in Ghana. I arrange and produce music, build software like DESQ and SmartNest, and install CCTV, security, fire alarm, public address, and network systems.
+lang: en
+url: "https://hubert2825.github.io"
+baseurl: ""
+
+author: Hubert Baidoo
+github_username: Hubert2825
+linkedin_url: "https://www.linkedin.com/in/hubert-baidoo-4671a1248/"
+email: hello@example.com   # EDIT: your real email address
+
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

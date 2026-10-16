@@ -1,207 +1,69 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hubert | Engineering student building software and hardware</title>
-  <meta name="description" content="First-year engineering student in Ghana building DESQ, a school management platform, and SmartNest, an ESP32 sensor and access-control system.">
-  <link rel="canonical" href="https://hubert2825.github.io/">
-  <meta name="theme-color" content="#f2f4ef">
-
-  <!-- Social preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Hubert | Engineering student building software and hardware">
-  <meta property="og:description" content="DESQ, a multi-school management platform, and SmartNest, an ESP32 sensor and access-control system.">
-  <meta property="og:url" content="https://hubert2825.github.io/">
-  <meta name="twitter:card" content="summary">
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Apply the saved or system theme before first paint to avoid a flash -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        document.documentElement.setAttribute("data-theme", theme);
-      } catch (e) {}
-    })();
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Hubert",
-    "url": "https://hubert2825.github.io/",
-    "jobTitle": "Engineering student and software developer",
-    "address": { "@type": "PostalAddress", "addressCountry": "GH" },
-    "sameAs": ["https://github.com/Hubert2825"]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap site-header__inner">
-      <a class="brand" href="#top" aria-label="Hubert, back to top">Hubert</a>
-      <nav aria-label="Main">
-        <ul class="nav">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-pressed="false" aria-label="Dark mode">
-        <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-        </svg>
-        <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-          <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        </svg>
-      </button>
+---
+layout: default
+permalink: /
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <h1 class="hero__title" id="hero-title">I arrange music, write software, and install the systems that keep buildings safe.</h1>
+    <p class="hero__lead">
+      I'm Hubert Baidoo, a computer engineering student at the University of Ghana in Accra.
+      Music is what I care about most. Software and hands-on installation work are how I build
+      things that run in the real world.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ '/music/' | relative_url }}">Hear my music</a>
+      <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Contact me</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="wrap">
-        <h1 class="hero__title" id="hero-title">I build software, and the hardware it talks to.</h1>
-        <p class="hero__lead">
-          I'm a first-year engineering student in Ghana. I'm building DESQ, a school management
-          platform, and SmartNest, a sensor and access-control system on ESP32 boards.
+<section class="section" aria-labelledby="areas-title">
+  <div class="wrap">
+    <h2 class="visually-hidden" id="areas-title">What I do</h2>
+    <div class="panels">
+      <a class="panel panel--music" href="{{ '/music/' | relative_url }}">
+        <h3>Music</h3>
+        <p>
+          I'm an arranger, producer, and songwriter. I write orchestral scores that begin with an
+          idea, then work out how every instrument carries it.
         </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#projects">See my projects</a>
-          <a class="btn btn--ghost" href="#contact">Contact me</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="wrap section__grid">
-        <div class="section__head">
-          <h2 id="projects-title">Projects</h2>
-          <p class="section__note">Two projects I built on my own, one in software and one in hardware.</p>
-        </div>
-
-        <div class="section__body">
-          <article class="project" aria-labelledby="desq-title">
-            <div class="project__top">
-              <h3 id="desq-title">DESQ</h3>
-              <p class="project__tagline">A school management system with a built-in learning platform, made for multiple schools on one deployment.</p>
-            </div>
-            <ul class="project__points">
-              <li>Four portals (school admin, teacher, student, and parent), each showing only what that role should see.</li>
-              <li>Gradebook with weighted assessment groups, report cards, transcripts, and PDF export.</li>
-              <li>Courses with lessons, assignments, quizzes that grade themselves, discussions, and a calendar.</li>
-              <li>Real-time notifications and one-to-one messaging over WebSockets.</li>
-              <li>Fee tracking with receipts, public admissions with a waiting list, and custom roles and permissions for each school.</li>
-            </ul>
-            <dl class="project__facts">
-              <div><dt>Built with</dt><dd>Laravel, SQL Server, React, TanStack Router and Query, Tailwind CSS</dd></div>
-              <div><dt>Status</dt><dd>In active development</dd></div>
-            </dl>
-          </article>
-
-          <article class="project" aria-labelledby="smartnest-title">
-            <div class="project__top">
-              <h3 id="smartnest-title">SmartNest</h3>
-              <p class="project__tagline">A connected home prototype that senses its surroundings and opens a door for the right RFID card.</p>
-            </div>
-            <ul class="project__points">
-              <li>Air quality (MQ135), temperature and humidity (DHT11), and ultrasonic sensors for a dustbin.</li>
-              <li>RFID door access (RC522) that recognizes five registered cardholders and swings a servo to open.</li>
-              <li>Several ESP32 and Arduino Uno boards that talk to each other over ESP-NOW and report to the Blynk cloud.</li>
-            </ul>
-            <dl class="project__facts">
-              <div><dt>Built with</dt><dd>ESP32, Arduino Uno, ESP-NOW, Blynk, RC522, MQ135, DHT11</dd></div>
-              <div><dt>Status</dt><dd>Final project, presented as a live demo</dd></div>
-            </dl>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="wrap section__grid">
-        <div class="section__head">
-          <h2 id="about-title">About</h2>
-        </div>
-        <div class="section__body prose">
-          <p>
-            I'm a first-year engineering student in Ghana. Alongside my coursework in computer
-            networking, calculus, physics, electronics, and engineering mechanics, I build software
-            and hardware projects on my own.
-          </p>
-          <p>
-            I like projects where the details matter: a gradebook that has to add up correctly, or a
-            door that has to open for the right card and nobody else.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="wrap section__grid">
-        <div class="section__head">
-          <h2 id="skills-title">Skills</h2>
-        </div>
-        <div class="section__body">
-          <dl class="skills">
-            <div>
-              <dt>Web</dt>
-              <dd>Laravel (PHP), React, TanStack Router and Query, Tailwind CSS, REST APIs with Sanctum, WebSockets with Reverb</dd>
-            </div>
-            <div>
-              <dt>Data</dt>
-              <dd>SQL Server, schema design, migrations</dd>
-            </div>
-            <div>
-              <dt>Embedded</dt>
-              <dd>ESP32, Arduino, ESP-NOW, Blynk, RFID, sensor integration</dd>
-            </div>
-            <div>
-              <dt>Cloud and networking</dt>
-              <dd>Azure and AWS (coursework projects), computer networking</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--last" id="contact" aria-labelledby="contact-title">
-      <div class="wrap section__grid">
-        <div class="section__head">
-          <h2 id="contact-title">Contact</h2>
-        </div>
-        <div class="section__body prose">
-          <p>If you'd like to work together, or have feedback on something I've built, get in touch.</p>
-          <ul class="contact-list">
-            <!-- EDIT: replace with your real email address -->
-            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
-            <li><a href="https://github.com/Hubert2825" rel="me noopener">github.com/Hubert2825</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap site-footer__inner">
-      <p>&copy; <span id="year">2026</span> Hubert. Based in Ghana.</p>
-      <p><a href="#top">Back to top</a></p>
+        <span class="panel__go">Listen and read</span>
+      </a>
+      <a class="panel" href="{{ '/software/' | relative_url }}">
+        <h3>Software</h3>
+        <p>DESQ, a school management platform, and SmartNest, a connected home prototype on ESP32 boards.</p>
+        <span class="panel__go">See the projects</span>
+      </a>
+      <a class="panel" href="{{ '/hands-on/' | relative_url }}">
+        <h3>Hands-on work</h3>
+        <p>CCTV, security systems, fire alarms, public address systems, network infrastructure, and CAD.</p>
+        <span class="panel__go">See the work</span>
+      </a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="js/main.js" defer></script>
-</body>
-</html>
+<section class="section" aria-labelledby="glance-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="glance-title">At a glance</h2>
+    </div>
+    <div class="section__body">
+      <dl class="glance">
+        <div>
+          <dt>2021 to now</dt>
+          <dd>IT Specialist and Support Technician (part-time) at ADEIGN BUSILINK SYSTEMS</dd>
+        </div>
+        <div>
+          <dt>2025 to 2028</dt>
+          <dd>Bachelor of Applied Science in Information Technology (system administration), BYU-Pathway Worldwide</dd>
+        </div>
+        <div>
+          <dt>2026 to 2029</dt>
+          <dd>BSc Computer Engineering, University of Ghana</dd>
+        </div>
+      </dl>
+      <p class="more"><a href="{{ '/about/' | relative_url }}">More about me</a></p>
+    </div>
+  </div>
+</section>

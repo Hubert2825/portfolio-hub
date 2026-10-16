@@ -1,0 +1,71 @@
+---
+layout: default
+title: Software
+permalink: /software/
+description: "DESQ, a multi-school management system with a learning platform, and SmartNest, an ESP32 sensor and access-control prototype, built by Hubert Baidoo."
+---
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Software</h1>
+    <p class="page-hero__lead">
+      I build full-stack web applications and the firmware for small connected devices. These are
+      two projects I made on my own.
+    </p>
+  </div>
+</section>
+
+{% for project in site.data.projects %}
+<section class="section" id="{{ project.id }}" aria-labelledby="{{ project.id }}-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="{{ project.id }}-title">{{ project.title }}</h2>
+      <p class="section__note">{{ project.tagline }}</p>
+    </div>
+    <div class="section__body">
+      <h3 class="subhead">What it does</h3>
+      <ul class="project__points">
+        {% for point in project.points %}
+        <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if project.decisions and project.decisions.size > 0 %}
+      <h3 class="subhead">Decisions I made</h3>
+      <ul class="project__points">
+        {% for decision in project.decisions %}
+        <li>{{ decision }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      <dl class="project__facts">
+        {% for fact in project.facts %}
+        <div><dt>{{ fact.label }}</dt><dd>{{ fact.value }}</dd></div>
+        {% endfor %}
+      </dl>
+
+      {% include gallery.html photos=project.screenshots base="/assets/images/projects/" %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="section" aria-labelledby="stack-title">
+  <div class="wrap section__grid">
+    <div class="section__head">
+      <h2 id="stack-title">How my stack changed</h2>
+    </div>
+    <div class="section__body prose">
+      <p>
+        I started with native PHP, HTML, and CSS. After I accidentally lost project files, I
+        stopped rebuilding what I'd lost and rebuilt how I work. I moved to React, Node.js,
+        Laravel, and SQL Server, and to strict version control with GitHub.
+      </p>
+      <p>
+        Frameworks gave me built-in authentication, routing, and database migrations, and
+        reusable components made the interfaces cleaner. Building my own APIs showed me why they
+        matter.
+      </p>
+    </div>
+  </div>
+</section>
